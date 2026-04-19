@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,19 @@
   <script src="js/tailwind.config.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <script src="js/load-tailwind-components.js"></script>
 </head>
+
 <body class="overflow-x-hidden bg-white font-sans antialiased text-neutral-900">
 
   <header id="site-nav" class="fixed left-0 right-0 top-0 z-50 transition-all duration-500 navbar-glass">
     <div class="mx-auto flex h-[52px] max-w-[1200px] items-center justify-between px-5 lg:px-8">
-      <a href="#" class="nav-logo text-[17px] font-semibold tracking-tight text-white transition-colors duration-500">Lakbay</a>
-      <nav class="nav-links absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 text-[12px] font-medium tracking-tight text-white/85 transition-colors duration-500 lg:flex">
+      <a href="#"
+        class="nav-logo text-[17px] font-semibold tracking-tight text-white transition-colors duration-500">Lakbay</a>
+      <nav
+        class="nav-links absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 text-[12px] font-medium tracking-tight text-white/85 transition-colors duration-500 lg:flex">
         <a href="#highlights" class="transition-opacity hover:opacity-70">Highlights</a>
         <a href="#manifesto" class="transition-opacity hover:opacity-70">Philosophy</a>
         <a href="#ai-engine" class="transition-opacity hover:opacity-70">Itinerary</a>
@@ -39,7 +44,8 @@
       <p class="apple-hero-emotion reveal reveal-delay-1" data-reveal>The journey takes flight.</p>
       <h1 class="apple-hero-product reveal reveal-delay-1" data-reveal>Plan the dream.</h1>
       <p class="apple-hero-dek reveal reveal-delay-2" data-reveal>
-        Don't budget the trip first — describe the vibe. Lakbay turns it into a living itinerary, a shared canvas, and a savings rhythm everyone can feel.
+        Don't budget the trip first — describe the vibe. Lakbay turns it into a living itinerary, a shared canvas, and a
+        savings rhythm everyone can feel.
       </p>
       <div class="apple-hero-actions reveal reveal-delay-3" data-reveal>
         <a href="#finale" class="apple-btn-primary">Start planning</a>
@@ -86,224 +92,584 @@
   <!-- Philosophy strip -->
   <section id="manifesto" class="section-bleed border-y border-neutral-100 bg-neutral-50">
     <div id="manifesto-text" class="mx-auto max-w-3xl space-y-10 text-center">
-      <p class="manifesto-line text-[clamp(1.35rem,3.8vw,2.25rem)] font-semibold leading-snug tracking-[-0.03em] text-neutral-900">
+      <p
+        class="manifesto-line text-[clamp(1.35rem,3.8vw,2.25rem)] font-semibold leading-snug tracking-[-0.03em] text-neutral-900">
         You tell us the dream.
       </p>
-      <p class="manifesto-line text-[clamp(1.35rem,3.8vw,2.25rem)] font-semibold leading-snug tracking-[-0.03em] text-neutral-800">
+      <p
+        class="manifesto-line text-[clamp(1.35rem,3.8vw,2.25rem)] font-semibold leading-snug tracking-[-0.03em] text-neutral-800">
         We build the itinerary.
       </p>
-      <p class="manifesto-line text-[clamp(1.35rem,3.8vw,2.25rem)] font-semibold leading-snug tracking-[-0.03em] text-neutral-700">
+      <p
+        class="manifesto-line text-[clamp(1.35rem,3.8vw,2.25rem)] font-semibold leading-snug tracking-[-0.03em] text-neutral-700">
         And we calculate exactly how to get there.
       </p>
     </div>
   </section>
 
-  <!-- Itinerary: split layout like Apple “Design” -->
-  <section id="ai-engine" class="section-bleed bg-white">
-    <div class="feature-split">
-      <div class="feature-copy">
-        <p class="section-kicker reveal" data-reveal>The itinerary</p>
-        <h2 class="heading-display reveal text-[clamp(1.85rem,4.2vw,3rem)]" data-reveal>
-          Built from how you want to feel.
+  <!-- Itinerary Engine -->
+  <section id="ai-engine" class="section-bleed relative overflow-hidden bg-neutral-50/30">
+    <div class="mx-auto max-w-7xl">
+
+      <!-- Typography Header -->
+      <div class="mb-16 text-center lg:mb-24">
+        <p class="section-kicker reveal" data-reveal>The Itinerary Engine</p>
+        <h2 class="heading-display mx-auto mt-2 max-w-3xl reveal text-[clamp(2rem,5vw,4rem)] leading-[1.05]"
+          data-reveal>
+          Built from the vibe.<br>Not a spreadsheet.
         </h2>
-        <p class="mt-6 text-lg font-normal leading-relaxed text-neutral-500 reveal" data-reveal>
-          Start with language, not spreadsheets. Lakbay interprets tone, pace, and priorities — then assembles routes, stays, and anchors you can refine on the canvas.
+        <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-neutral-500 md:text-lg reveal" data-reveal>
+          Start with language. Tell Lakbay your group's pace, budget, and non-negotiables. Our engine instantly compiles
+          flights, stays, and daily routes you can immediately canvas.
         </p>
       </div>
-      <div class="feature-media reveal-scale" data-reveal-scale>
-        <div class="feature-media-inner">
-          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80" alt="" class="h-full w-full object-cover" />
+
+      <!-- The Generator UI -->
+      <div class="mx-auto max-w-5xl grid items-center gap-16 lg:grid-cols-2 lg:gap-12">
+
+        <!-- Left: The Prompt Input -->
+        <div class="flex flex-col justify-center reveal" data-reveal>
+          <div class="relative mx-auto w-full max-w-md lg:ml-auto lg:mr-0">
+            <!-- Glowing background effect -->
+            <div
+              class="absolute -inset-1 rounded-[2.5rem] bg-gradient-to-br from-teal-400 via-white to-orange-400 opacity-20 blur-2xl">
+            </div>
+
+            <div
+              class="relative rounded-[2rem] border border-white/60 bg-white/80 p-8 shadow-2xl shadow-neutral-200/50 backdrop-blur-xl">
+              <div class="mb-6 flex items-center gap-3">
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-teal-400 to-teal-600 text-white shadow-inner">
+                  <!-- Sparkle Icon -->
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M12 3v4M12 17v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M3 12h4M17 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+                  </svg>
+                </div>
+                <p class="text-xs font-bold uppercase tracking-widest text-neutral-400">Your Prompt</p>
+              </div>
+
+              <p class="text-[1.35rem] font-medium leading-relaxed tracking-tight text-neutral-800">
+                "Siargao for 4. Slow surf mornings, intense island hopping, and one epic boodle fight. Under ₱15k per
+                head."
+              </p>
+
+              <div class="mt-8 flex items-center gap-4 border-t border-neutral-100 pt-6">
+                <div class="relative flex h-8 w-8 items-center justify-center">
+                  <span
+                    class="absolute inline-flex h-full w-full animate-spin rounded-full border-[3px] border-neutral-100 border-t-teal-500"></span>
+                </div>
+                <p class="text-[13px] font-bold uppercase tracking-widest text-teal-600">Generating itinerary...</p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Right: The Generated Timeline -->
+        <div class="relative mx-auto w-full max-w-lg lg:ml-0 lg:mr-auto">
+
+          <!-- Continuous Timeline Line -->
+          <div
+            class="absolute bottom-12 left-[19px] top-8 w-[3px] bg-gradient-to-b from-teal-500 via-orange-300 to-transparent sm:left-[21px]">
+          </div>
+
+          <div class="relative z-10 flex flex-col">
+
+            <!-- Day 1 Row -->
+            <div class="flex w-full gap-4 sm:gap-6 reveal-scale" data-reveal-scale>
+              <div
+                class="mt-8 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white shadow-sm ring-2 ring-neutral-100 sm:h-11 sm:w-11">
+                <div class="h-3 w-3 rounded-full bg-teal-500 shadow-sm"></div>
+              </div>
+              <div class="flex-1 pb-6 w-full">
+                <div
+                  class="group rounded-[1.5rem] border border-neutral-100 bg-white p-5 shadow-xl shadow-neutral-200/20 transition-transform duration-300 hover:-translate-y-1 sm:p-6 w-full">
+                  <span
+                    class="mb-3 inline-block rounded-md bg-teal-50 px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-teal-700">Day
+                    1</span>
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-neutral-50 text-xl shadow-inner">
+                      ✈️</div>
+                    <div class="flex-1">
+                      <h4 class="text-[15px] font-bold text-neutral-900">Direct to Sayak (IAO)</h4>
+                      <p class="mt-1 text-xs leading-relaxed text-neutral-500">Pre-booked van waiting. Direct drop-off
+                        at Harana Surf Resort.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Day 2 Row -->
+            <div class="flex w-full gap-4 sm:gap-6 reveal-scale reveal-delay-1" data-reveal-scale>
+              <div
+                class="mt-8 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white shadow-sm ring-2 ring-neutral-100 sm:h-11 sm:w-11">
+                <div class="h-3 w-3 rounded-full bg-orange-400 shadow-sm"></div>
+              </div>
+              <div class="flex-1 pb-6 w-full">
+                <div
+                  class="group rounded-[1.5rem] border border-neutral-100 bg-white p-5 shadow-xl shadow-neutral-200/20 transition-transform duration-300 hover:-translate-y-1 sm:p-6 w-full">
+                  <span
+                    class="mb-3 inline-block rounded-md bg-orange-50 px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-orange-700">Day
+                    2</span>
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-neutral-50 text-xl shadow-inner">
+                      🏝️</div>
+                    <div class="flex-1">
+                      <h4 class="text-[15px] font-bold text-neutral-900">Tri-Island Hopping</h4>
+                      <p class="mt-1 text-xs leading-relaxed text-neutral-500">Naked, Daku, Guyam. Includes the epic
+                        boodle fight lunch.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Day 3 Row -->
+            <div class="flex w-full gap-4 sm:gap-6 reveal-scale reveal-delay-2" data-reveal-scale>
+              <div
+                class="mt-8 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white shadow-sm ring-2 ring-neutral-100 sm:h-11 sm:w-11">
+                <div class="h-3 w-3 rounded-full bg-neutral-300 shadow-sm"></div>
+              </div>
+              <div class="flex-1 w-full">
+                <div
+                  class="group rounded-[1.5rem] border border-neutral-100 bg-white p-5 shadow-xl shadow-neutral-200/20 transition-transform duration-300 hover:-translate-y-1 sm:p-6 w-full">
+                  <span
+                    class="mb-3 inline-block rounded-md bg-neutral-100 px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-neutral-500">Day
+                    3</span>
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-neutral-50 text-xl shadow-inner">
+                      🏄‍♂️</div>
+                    <div class="flex-1">
+                      <h4 class="text-[15px] font-bold text-neutral-900">Slow Surf Morning</h4>
+                      <p class="mt-1 text-xs leading-relaxed text-neutral-500">Dawn patrol at Jacking Horse. Chill
+                        afternoon motorbiking.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </div>
+  </section>
 
-    <div class="mx-auto mt-20 max-w-6xl lg:mt-28">
-      <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-        <div class="reveal" data-reveal>
-          <div class="prompt-shell">
-            <p class="prompt-eyebrow">Your vibe</p>
-            <p class="prompt-quote">
-              "Kyoto in fall, slow mornings, one fancy dinner, lots of temples — we're three friends who hate rushing."
-            </p>
-            <div class="ai-status-line">
-              <span class="ai-status-dot"></span>
-              Lakbay is building your days…
+  <!-- Canvassing & Chat -->
+  <section id="canvas" class="section-bleed border-t border-neutral-100 bg-neutral-50/50">
+    <div class="mx-auto max-w-7xl">
+
+      <div class="mb-14 text-center lg:mb-20">
+        <p class="section-kicker reveal" data-reveal>Canvassing & Chat</p>
+        <h2 class="heading-display mx-auto mt-2 max-w-3xl reveal text-[clamp(1.85rem,4vw,3rem)]" data-reveal>
+          Canvas options. Suggest changes.<br>Watch the plan update.
+        </h2>
+        <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-neutral-500 md:text-lg reveal" data-reveal>
+          The group chat is directly tied to the itinerary. Nag-canvas ng mas murang van? Propose it in the chat, get
+          the barkada's approval, and the generated plan updates automatically for everyone. no more buried links in
+          Messenger.
+        </p>
+      </div>
+
+      <!-- Immersive App Window -->
+      <div
+        class="relative mx-auto w-full max-w-5xl overflow-hidden rounded-[2rem] border border-neutral-200/80 bg-white shadow-2xl shadow-neutral-300/40 reveal-scale"
+        data-reveal-scale>
+
+        <div class="flex h-[600px] w-full flex-col sm:h-[550px] sm:flex-row">
+
+          <!-- Left Column: Generated Plan & Canvassing -->
+          <div
+            class="flex w-full flex-col border-b border-neutral-100 bg-neutral-50/50 sm:w-5/12 sm:border-b-0 sm:border-r">
+
+            <div class="border-b border-neutral-200/60 bg-white px-6 py-5">
+              <h3 class="text-base font-semibold text-neutral-900">Comparing Options</h3>
+              <p class="text-xs text-neutral-500">Day 1 Accommodation</p>
             </div>
-          </div>
-        </div>
-        <div class="relative min-h-[400px] lg:min-h-[420px]">
-          <div class="absolute right-4 top-0 w-[88%] max-w-sm reveal reveal-delay-1 animate-float-slow" data-reveal>
-            <div class="float-card bg-white">
-              <div class="mb-4 flex items-center gap-3">
-                <div class="icon-chip-teal">✈</div>
-                <div>
-                  <p class="ui-card-label">Flights</p>
-                  <p class="font-semibold tracking-tight">HAN → KIX · Nov 12</p>
+
+            <div class="flex-1 overflow-y-auto p-5 space-y-4">
+
+              <!-- Active Itinerary Selection -->
+              <div class="relative rounded-xl border-2 border-teal-500 bg-white p-4 shadow-sm">
+                <div
+                  class="absolute -top-3 left-4 inline-flex items-center rounded-full bg-teal-500 px-2 py-0.5 text-[10px] font-bold tracking-widest text-white uppercase">
+                  Active Plan</div>
+                <div class="mt-2 flex justify-between items-start">
+                  <div>
+                    <h4 class="text-sm font-bold text-neutral-900">Harana Surf Resort</h4>
+                    <p class="text-xs text-neutral-500 mt-0.5">Barkada Room (8 pax)</p>
+                  </div>
+                </div>
+                <div class="mt-3 flex items-center justify-between border-t border-teal-50 pt-3">
+                  <p class="text-[13px] font-bold text-teal-700">₱4,500 / night</p>
+                  <p class="text-[10px] text-neutral-400">Canvassed by Maya</p>
                 </div>
               </div>
-              <div class="itinerary-progress-track">
-                <div class="itinerary-progress-fill"></div>
-              </div>
-            </div>
-          </div>
-          <div class="absolute left-0 top-28 w-[85%] max-w-sm reveal reveal-delay-2 animate-float-delayed" data-reveal>
-            <div class="float-card bg-white">
-              <div class="mb-3 flex items-center gap-3">
-                <div class="icon-chip-orange">⌂</div>
-                <div>
-                  <p class="ui-card-label">Stay</p>
-                  <p class="font-semibold tracking-tight">Gion · 4 nights</p>
+
+              <!-- Discarded/Alternative Option -->
+              <div
+                class="rounded-xl border border-neutral-200 bg-white p-4 opacity-60 transition-opacity hover:opacity-100">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h4 class="text-sm font-bold text-neutral-900">Kermit Siargao</h4>
+                    <p class="text-xs text-neutral-500 mt-0.5">Two Standard Rooms</p>
+                  </div>
+                </div>
+                <div class="mt-3 flex items-center justify-between border-t border-neutral-50 pt-3">
+                  <p class="text-[13px] font-bold text-neutral-600">₱6,200 / night</p>
+                  <p class="text-[10px] text-neutral-400">Original Plan</p>
                 </div>
               </div>
-              <p class="text-sm tracking-tight text-neutral-500">Near Philosopher's Path · walkable old town</p>
+
+              <!-- Incoming Canvas Hook -->
+              <div
+                class="mt-6 flex items-center gap-3 rounded-xl border border-dashed border-neutral-300 bg-neutral-100/50 p-4 text-xs text-neutral-500">
+                <span class="flex h-2.5 w-2.5 shrink-0 rounded-full bg-orange-400 animate-pulse"></span>
+                <span>Paolo is canvassing van rentals...</span>
+              </div>
+
             </div>
           </div>
-          <div class="absolute bottom-2 right-6 w-[78%] max-w-xs reveal reveal-delay-3" data-reveal>
-            <div class="float-card bg-gradient-to-br from-orange-50 to-white">
+
+          <!-- Right Column: The Group Chat -->
+          <div class="flex w-full flex-col bg-white sm:w-7/12">
+
+            <!-- Chat Header -->
+            <div class="flex items-center justify-between border-b border-neutral-100 px-6 py-4">
               <div class="flex items-center gap-3">
-                <div class="icon-chip-orange">☕</div>
+                <div class="flex -space-x-2">
+                  <div
+                    class="flex h-7 w-7 items-center justify-center z-[3] rounded-full border-2 border-white bg-gradient-to-br from-teal-400 to-teal-600 text-[10px] font-bold text-white shadow-sm">
+                    M</div>
+                  <div
+                    class="flex h-7 w-7 items-center justify-center z-[2] rounded-full border-2 border-white bg-gradient-to-br from-orange-400 to-orange-600 text-[10px] font-bold text-white shadow-sm">
+                    P</div>
+                  <div
+                    class="flex h-7 w-7 items-center justify-center z-[1] rounded-full border-2 border-white bg-gradient-to-br from-blue-400 to-blue-600 text-[10px] font-bold text-white shadow-sm">
+                    C</div>
+                </div>
                 <div>
-                  <p class="ui-card-label">Food</p>
-                  <p class="font-semibold tracking-tight">Kaiseki · Fri 7:30 PM</p>
+                  <h3 class="text-sm font-semibold text-neutral-900">Barkada Plan</h3>
+                  <p class="text-[10px] text-teal-600 font-medium">3 typing...</p>
                 </div>
               </div>
             </div>
+
+            <!-- Chat Messages -->
+            <div class="flex-1 space-y-5 overflow-y-auto p-6 text-sm">
+
+              <!-- Msg System Initial -->
+              <div
+                class="mx-auto w-max rounded-full bg-neutral-100 px-3 py-1 text-[10px] uppercase tracking-wider text-neutral-500 font-bold">
+                Initial Itinerary Generated
+              </div>
+
+              <!-- Msg Maya -->
+              <div class="flex gap-3">
+                <div
+                  class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-teal-400 to-teal-600 text-xs font-bold text-white shadow-sm">
+                  M</div>
+                <div class="max-w-[85%]">
+                  <div
+                    class="rounded-[1.25rem] rounded-tl-sm bg-neutral-100 px-4 py-3 text-[13px] leading-relaxed text-neutral-800">
+                    Guys, nag-canvas ako ng accommodation. Kermit is slightly over budget if we get 2 rooms. Found a
+                    barkada room in Harana for just ₱4.5k per night!
+                  </div>
+                </div>
+              </div>
+
+              <!-- System Proposal Card -->
+              <div class="ml-11 max-w-[85%] overflow-hidden rounded-xl border border-teal-100 bg-white shadow-sm">
+                <div class="bg-teal-50/50 px-4 py-3 border-b border-teal-100/50">
+                  <p class="text-xs font-bold text-teal-900">Maya proposed a plan change</p>
+                  <p class="text-[11px] text-teal-700 mt-0.5">Switch day 1-3 stay to <span class="font-bold">Harana Surf
+                      Resort</span></p>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2.5 bg-white">
+                  <button
+                    class="rounded-lg bg-teal-600 px-4 py-1.5 text-xs font-semibold text-white shadow-sm transition-colors hover:bg-teal-700">Approve</button>
+                  <button
+                    class="rounded-lg border border-neutral-200 bg-white px-4 py-1.5 text-xs font-medium text-neutral-600 transition-colors hover:bg-neutral-50">Reject</button>
+                </div>
+              </div>
+
+              <!-- Msg Carlo (You) -->
+              <div class="flex flex-row-reverse gap-3">
+                <div
+                  class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-400 to-blue-600 text-xs font-bold text-white shadow-sm">
+                  C</div>
+                <div class="max-w-[85%]">
+                  <div
+                    class="rounded-[1.25rem] rounded-tr-sm bg-teal-600 px-4 py-3 text-[13px] leading-relaxed text-white">
+                    G! Approved the change. Saves us money for drinks. 🍻
+                  </div>
+                </div>
+              </div>
+
+              <!-- Msg System Success -->
+              <div
+                class="mx-auto my-3 w-max rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-teal-700">
+                ✓ Plan automatically updated
+              </div>
+
+              <!-- Msg Paolo -->
+              <div class="flex gap-3">
+                <div
+                  class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-orange-400 to-orange-600 text-xs font-bold text-white shadow-sm">
+                  P</div>
+                <div class="max-w-[85%]">
+                  <div
+                    class="rounded-[1.25rem] rounded-tl-sm bg-neutral-100 px-4 py-3 text-[13px] leading-relaxed text-neutral-800">
+                    I'll canvas van rentals from the airport next. Waiting on a reply from Kuya driver, will paste rates
+                    here.
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
+
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- Canvas -->
-  <section id="canvas" class="section-bleed bg-neutral-100">
-    <div class="mx-auto max-w-6xl">
-      <div class="mb-14 lg:mb-20">
-        <p class="section-kicker reveal" data-reveal>The canvas</p>
-        <h2 class="heading-display reveal max-w-2xl text-[clamp(1.85rem,4vw,3rem)]" data-reveal>
-          Better together — before you board.
-        </h2>
-        <p class="mt-5 max-w-2xl text-base leading-relaxed text-neutral-500 reveal" data-reveal>
-          Avatars, votes, and live presence so the group stays aligned without another thread to babysit.
-        </p>
-      </div>
-      <div class="relative aspect-[16/10] max-h-[560px] overflow-hidden rounded-[1.75rem] border border-neutral-200 bg-white shadow-2xl shadow-neutral-300/30 reveal-scale" data-reveal-scale>
-        <div class="canvas-board-wash"></div>
-        <div class="absolute bottom-[18%] left-[8%] right-[8%] top-[12%] rounded-2xl border border-dashed border-neutral-300/80 bg-white/60"></div>
-        <div class="absolute left-[12%] top-[10%] flex -space-x-2">
-          <div class="avatar-swatch-a"></div>
-          <div class="avatar-swatch-b"></div>
-          <div class="avatar-swatch-c"></div>
-          <div class="avatar-swatch-more">+2</div>
-        </div>
-        <div class="absolute left-[22%] top-[28%] z-20 animate-cursor-drift">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="drop-shadow-md">
-            <path d="M5 3L19 12L12 13L9 21L5 3Z" fill="#0f766e" stroke="white" stroke-width="1.5"/>
-          </svg>
-          <span class="cursor-chip-teal">Maya</span>
-        </div>
-        <div class="absolute right-[28%] top-[45%] z-20" style="animation: cursorDrift 10s ease-in-out infinite reverse;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="drop-shadow-md">
-            <path d="M5 3L19 12L12 13L9 21L5 3Z" fill="#f97316" stroke="white" stroke-width="1.5"/>
-          </svg>
-          <span class="cursor-chip-orange">Alex</span>
-        </div>
-        <div class="canvas-mini-card absolute right-[12%] top-[32%] w-36 text-left">
-          <p class="text-[10px] uppercase text-neutral-400">Vote</p>
-          <p class="mt-1 text-xs font-semibold tracking-tight">Sunrise hike</p>
-          <div class="mt-2 flex gap-1">
-            <span class="vote-bar-on"></span>
-            <span class="vote-bar-off"></span>
-          </div>
-        </div>
-        <div class="canvas-mini-card absolute bottom-[22%] left-[18%] w-40">
-          <p class="text-[10px] uppercase text-neutral-400">Live</p>
-          <p class="text-xs font-semibold tracking-tight">3 editing · 1 vote open</p>
-        </div>
-      </div>
+  <!-- Savings: Ultra-Premium Impact -->
+  <section id="reverse-budget" class="section-bleed relative overflow-hidden bg-white">
+    <!-- Soft background glow for visual impact -->
+    <div
+      class="pointer-events-none absolute right-0 top-0 h-[800px] w-[800px] -translate-y-1/2 translate-x-1/3 rounded-full bg-teal-50/60 blur-[120px]">
     </div>
-  </section>
 
-  <!-- Savings: Apple-style big stat + detail -->
-  <section id="reverse-budget" class="section-bleed bg-white">
-    <div class="stat-stage">
-      <p class="section-kicker reveal" data-reveal>Savings</p>
-      <p class="stat-huge reveal" data-reveal>₱24</p>
-      <p class="stat-caption reveal" data-reveal>Daily savings goal per person — clear, calm, and tied to the trip you already agreed on.</p>
-    </div>
-    <div class="mx-auto mt-20 flex max-w-4xl flex-col items-center justify-center gap-14 lg:flex-row lg:gap-20">
-      <div class="relative h-48 w-48 shrink-0 reveal-scale" data-reveal-scale>
-        <div class="absolute inset-0 ring-progress">
-          <div class="ring-progress-inner flex flex-col items-center justify-center">
-            <span class="text-[11px] font-semibold uppercase tracking-widest text-neutral-400">Funded</span>
-            <span class="mt-1 text-4xl font-semibold tracking-[-0.05em] text-neutral-900">72%</span>
-            <span class="mt-0.5 text-xs tracking-tight text-neutral-500">to goal</span>
-          </div>
+    <div class="relative z-10 mx-auto max-w-6xl">
+
+      <!-- Massive Stat -->
+      <div class="text-center">
+        <p class="section-kicker reveal" data-reveal>Reverse Budgeting</p>
+        <div class="mt-4 flex flex-col items-center justify-center reveal" data-reveal>
+          <span
+            class="text-[clamp(5.5rem,16vw,12rem)] font-bold leading-none tracking-[-0.06em] text-neutral-900">₱24</span>
+          <span class="mt-4 text-[clamp(1.1rem,3vw,1.5rem)] font-medium tracking-tight text-neutral-400">per day. That's
+            all it takes.</span>
         </div>
       </div>
-      <div class="w-full max-w-md space-y-6 text-left">
-        <h3 class="heading-display text-2xl tracking-tight reveal" data-reveal>The trip comes first.</h3>
-        <p class="text-base leading-relaxed text-neutral-500 reveal" data-reveal>
-          Lakbay works backward from your dream total so the number on your lock screen always answers one question: “Are we still on track for the version of this trip we actually want?”
-        </p>
-        <div class="space-y-3 reveal" data-reveal>
-          <div class="flex justify-between text-sm font-medium tracking-tight text-neutral-600">
-            <span>Trip fund</span>
-            <span>₱4,320 / ₱6,000</span>
+
+      <!-- Bento-style Savings Widgets -->
+      <div class="mx-auto mt-20 grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+        <!-- Large Visual: The Shared Pot -->
+        <div
+          class="group relative col-span-1 flex min-h-[300px] flex-col overflow-hidden rounded-[2.5rem] border border-neutral-200/50 bg-neutral-50 px-8 py-10 shadow-lg shadow-neutral-200/20 transition-transform duration-500 hover:shadow-xl hover:shadow-neutral-200/30 sm:col-span-2 reveal-scale"
+          data-reveal-scale>
+          <!-- background image washed out -->
+          <div
+            class="absolute inset-0 z-0 opacity-20 mix-blend-multiply transition-transform duration-700 group-hover:scale-105">
+            <img src="https://images.unsplash.com/photo-1542259009477-d625272157b7?auto=format&fit=crop&w=1200&q=80"
+              alt="Siargao" class="h-full w-full object-cover">
           </div>
-          <div class="h-2.5 overflow-hidden rounded-full bg-neutral-100">
-            <div class="savings-bar-fill"></div>
+          <div class="absolute inset-0 z-0 bg-gradient-to-t from-neutral-50 via-neutral-50/80 to-transparent"></div>
+
+          <div class="relative z-10 flex-1">
+            <div
+              class="mb-4 inline-flex items-center rounded-full border border-teal-200/60 bg-teal-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-teal-700 backdrop-blur-sm">
+              Team Siargao</div>
+            <h3 class="text-4xl font-semibold tracking-[-0.04em] text-neutral-900">₱17,280 <span
+                class="text-xl font-medium text-neutral-400">/ ₱24k</span></h3>
+            <p class="mt-2 text-sm font-medium text-neutral-500">72% funded by the Barkada</p>
+          </div>
+
+          <!-- Progress Visualization -->
+          <div
+            class="relative z-10 mt-12 flex h-8 w-full overflow-hidden rounded-full bg-white/60 shadow-inner backdrop-blur-md ring-1 ring-neutral-200/50">
+            <div
+              class="h-full w-[72%] rounded-full bg-teal-500 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.15)_25%,rgba(255,255,255,0.15)_50%,transparent_50%,transparent_75%,rgba(255,255,255,0.15)_75%,rgba(255,255,255,0.15)_100%)] bg-[length:20px_20px] shadow-[inset_0_2px_4px_rgba(255,255,255,0.3)] transition-all duration-1000">
+            </div>
+          </div>
+          <div class="relative z-10 mt-4 flex justify-between text-xs font-semibold tracking-wide text-neutral-400">
+            <span>Today</span>
+            <span>Takeoff: 250 days</span>
           </div>
         </div>
+
+        <!-- The Breakdown Math -->
+        <div
+          class="col-span-1 flex flex-col justify-between rounded-[2.5rem] border border-neutral-200/50 bg-white p-8 shadow-lg shadow-neutral-200/20 reveal-scale reveal-delay-1"
+          data-reveal-scale>
+          <div>
+            <div
+              class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-50 text-2xl text-orange-500">
+              ÷</div>
+            <h3 class="text-lg font-semibold tracking-tight text-neutral-900">The Math</h3>
+            <p class="mt-2 text-sm leading-relaxed text-neutral-500">We work backward from the dream, not forward from
+              your wallet.</p>
+          </div>
+
+          <div class="mt-8 space-y-3.5 text-sm font-medium tracking-tight">
+            <div class="flex justify-between border-b border-neutral-100 pb-3">
+              <span class="text-neutral-500">Group total</span>
+              <span class="text-neutral-900">₱24,000</span>
+            </div>
+            <div class="flex justify-between border-b border-neutral-100 pb-3">
+              <span class="text-neutral-500">Per person (÷4)</span>
+              <span class="text-neutral-900">₱6,000</span>
+            </div>
+            <div class="flex justify-between border-b border-neutral-100 pb-3">
+              <span class="text-neutral-500">Days to go</span>
+              <span class="text-neutral-900">250 days</span>
+            </div>
+            <div class="flex justify-between pt-1 text-base text-teal-600">
+              <span>Daily goal</span>
+              <span>₱24</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Micro-nudge Card -->
+        <div
+          class="col-span-1 flex flex-col items-center justify-between gap-8 rounded-[2.5rem] border border-neutral-200/50 bg-gradient-to-br from-white to-orange-50/40 p-8 shadow-lg shadow-neutral-200/20 sm:col-span-2 sm:flex-row lg:col-span-3 reveal-scale reveal-delay-2"
+          data-reveal-scale>
+          <div class="max-w-xl">
+            <h3 class="text-xl font-semibold tracking-tight text-neutral-900 sm:text-2xl">Skip the iced coffee. Get the
+              surfboard.</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-neutral-500">Lakbay finds painless, everyday choices to
+              divert loose change into your shared getaway. By the time you pack, everything is already paid for.</p>
+          </div>
+          <div class="w-full shrink-0 sm:w-auto">
+            <div
+              class="flex items-center justify-center gap-3 rounded-2xl border border-neutral-100 bg-white p-4 shadow-sm">
+              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-50 text-xl shadow-inner">☕
+              </div>
+              <div class="text-neutral-300">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="stroke-current" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
+              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-xl shadow-inner">🏄‍♂️
+              </div>
+              <div
+                class="ml-2 flex items-center justify-center rounded-xl bg-teal-100 px-3 py-2 text-xs font-bold text-teal-700">
+                +₱150</div>
+            </div>
+          </div>
+        </div>
+
       </div>
+
     </div>
   </section>
 
   <!-- Accountability -->
   <section id="accountability" class="section-bleed border-t border-neutral-100 bg-neutral-50">
-    <div class="mx-auto max-w-6xl">
+    <div class="mx-auto max-w-6xl text-center">
       <p class="section-kicker reveal" data-reveal>Group energy</p>
-      <h2 class="heading-display reveal max-w-2xl text-[clamp(1.85rem,4vw,3rem)]" data-reveal>
+      <h2 class="heading-display mx-auto reveal max-w-2xl text-[clamp(1.85rem,4vw,3rem)]" data-reveal>
         Nobody drifts alone before takeoff.
       </h2>
-      <div class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="account-card-muted reveal" data-reveal>
-          <div class="flex items-start gap-4">
-            <div class="notify-avatar-teal"></div>
-            <div>
-              <p class="notify-title">Alex hit their savings goal!</p>
-              <p class="notify-meta">Day streak: 14 · Trip in 62 days</p>
+
+      <div
+        class="mx-auto mt-16 max-w-4xl overflow-hidden rounded-[2rem] border border-neutral-200/60 bg-white shadow-xl shadow-neutral-200/40 reveal"
+        data-reveal>
+
+        <!-- Card Header -->
+        <div class="border-b border-neutral-100 bg-neutral-50/80 px-6 py-5 sm:px-8">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <h3 class="text-sm font-semibold tracking-wide text-neutral-900">Live Barkada Feed</h3>
             </div>
+            <p class="text-xs font-medium uppercase tracking-widest text-neutral-400">Summer 2026</p>
           </div>
         </div>
-        <div class="account-card-muted reveal reveal-delay-1" data-reveal>
-          <div class="flex items-start gap-4">
-            <div class="notify-avatar-teal-soft"></div>
-            <div>
-              <p class="notify-title">Maya nudged the group fund +₱50</p>
-              <p class="notify-meta">Shared pot · Kyoto 2026</p>
+
+        <!-- Card Body (Grid List) -->
+        <div class="grid sm:grid-cols-2 text-left">
+
+          <!-- Sample 1 -->
+          <div class="border-b border-neutral-100 p-6 sm:border-r lg:p-8 transition-colors hover:bg-neutral-50/50">
+            <div class="flex items-start gap-4">
+              <div class="notify-avatar-teal text-lg font-semibold">C</div>
+              <div class="flex-1">
+                <p class="notify-title">Carlo hit his savings goal!</p>
+                <p class="notify-meta">Day streak: 14 · Siargao in 45 days</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="account-card-muted reveal reveal-delay-2" data-reveal>
-          <div class="flex items-start gap-4">
-            <div class="notify-avatar-orange"></div>
-            <div>
-              <p class="notify-title">Jordan voted: "Tea house Saturday"</p>
-              <p class="notify-meta">Canvas · 3 agreed</p>
+
+          <!-- Sample 2 -->
+          <div class="border-b border-neutral-100 p-6 lg:p-8 transition-colors hover:bg-neutral-50/50">
+            <div class="flex items-start gap-4">
+              <div class="notify-avatar-teal-soft text-lg font-semibold">M</div>
+              <div class="flex-1">
+                <p class="notify-title">Maria nudged the group fund +₱500</p>
+                <p class="notify-meta">Shared pot · Palawan Island Hopping</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="account-card-surface reveal" data-reveal>
-          <p class="notify-title">Weekly digest sent</p>
-          <p class="notify-meta mt-2">Everyone's on track for the Shinkansen add-on.</p>
-        </div>
-        <div class="account-card-surface reveal reveal-delay-1" data-reveal>
-          <p class="notify-title">Sam completed the checklist</p>
-          <p class="notify-meta mt-2">Passports · insurance · pocket wifi</p>
-        </div>
-        <div class="account-card-surface reveal reveal-delay-2" data-reveal>
-          <p class="notify-title">Group milestone unlocked</p>
-          <p class="notify-meta mt-2">50% funded — confetti optional, pride mandatory.</p>
+
+          <!-- Sample 3 -->
+          <div class="border-b border-neutral-100 p-6 sm:border-r lg:p-8 transition-colors hover:bg-neutral-50/50">
+            <div class="flex items-start gap-4">
+              <div class="notify-avatar-orange text-lg font-semibold">J</div>
+              <div>
+                <p class="notify-title">JM voted: "Boodle fight for dinner"</p>
+                <p class="notify-meta">Canvas · 3 agreed</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sample 4 -->
+          <div class="border-b border-neutral-100 p-6 lg:p-8 transition-colors hover:bg-neutral-50/50">
+            <div class="flex items-start gap-4">
+              <div class="notify-icon-box text-teal-600">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+              </div>
+              <div>
+                <p class="notify-title">Bea completed the checklist</p>
+                <p class="notify-meta">Sunblock · Snorkel · Terminal fee</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sample 5 -->
+          <div
+            class="border-b border-neutral-100 p-6 sm:border-b-0 sm:border-r lg:p-8 transition-colors hover:bg-neutral-50/50">
+            <div class="flex items-start gap-4">
+              <div class="notify-avatar-teal text-lg font-semibold">P</div>
+              <div class="flex-1">
+                <p class="notify-title">Paolo added a new poll</p>
+                <p class="notify-meta">"Rent a motorcycle or take tricycles?"</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sample 6 -->
+          <div class="bg-orange-50/40 p-6 lg:p-8 transition-colors hover:bg-orange-50/70">
+            <div class="flex items-start gap-4">
+              <div class="notify-icon-box bg-white text-orange-500">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="8" r="7" />
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <p class="notify-title text-orange-900">Barkada milestone unlocked!</p>
+                <p class="notify-meta text-orange-700/80">75% funded for Boracay — drinks on Carlo!</p>
+                <div class="notify-progress-track mt-3 bg-orange-200/50">
+                  <div class="notify-progress-fill-orange w-[75%]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -312,7 +678,8 @@
   <!-- Memory -->
   <section id="memory" class="section-bleed relative overflow-hidden bg-black text-white lg:py-40">
     <div class="absolute inset-0 opacity-35">
-      <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=2000&q=80" alt="" class="h-full w-full object-cover grayscale" />
+      <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=2000&q=80" alt=""
+        class="h-full w-full object-cover grayscale" />
     </div>
     <div class="absolute inset-0 bg-gradient-to-b from-black via-black/92 to-black"></div>
     <div class="relative z-10 mx-auto max-w-6xl">
@@ -334,26 +701,34 @@
           <div class="scrapbook-pin text-3xl">📍</div>
           <p class="mt-1 text-[10px] uppercase tracking-widest text-white/50">Fushimi</p>
         </div>
-        <div class="polaroid absolute left-[26%] top-[4%] w-40 rotate-[-5deg] bg-white p-2 pb-7 reveal-scale" data-reveal-scale>
+        <div class="polaroid absolute left-[26%] top-[4%] w-40 rotate-[-5deg] bg-white p-2 pb-7 reveal-scale"
+          data-reveal-scale>
           <div class="aspect-[4/5] overflow-hidden rounded-sm bg-neutral-200">
-            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=400&q=80" alt="" class="h-full w-full object-cover" />
+            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=400&q=80"
+              alt="" class="h-full w-full object-cover" />
           </div>
           <p class="mt-2 text-center text-[10px] font-medium tracking-wide text-neutral-500">Day 3 — morning light</p>
         </div>
-        <div class="polaroid absolute bottom-[14%] right-[6%] w-44 rotate-[4deg] bg-white p-2 pb-7 reveal-scale" data-reveal-scale>
+        <div class="polaroid absolute bottom-[14%] right-[6%] w-44 rotate-[4deg] bg-white p-2 pb-7 reveal-scale"
+          data-reveal-scale>
           <div class="aspect-[4/5] overflow-hidden rounded-sm bg-neutral-200">
-            <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=400&q=80" alt="" class="h-full w-full object-cover" />
+            <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=400&q=80"
+              alt="" class="h-full w-full object-cover" />
           </div>
           <p class="mt-2 text-center text-[10px] font-medium tracking-wide text-neutral-500">Train window</p>
         </div>
         <div class="polaroid absolute right-[30%] top-[36%] w-36 rotate-[-2deg] bg-white p-2 pb-6 reveal" data-reveal>
           <div class="aspect-square overflow-hidden rounded-sm bg-neutral-200">
-            <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=400&q=80" alt="" class="h-full w-full object-cover" />
+            <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=400&q=80" alt=""
+              class="h-full w-full object-cover" />
           </div>
         </div>
-        <div class="polaroid absolute bottom-[26%] left-[10%] w-32 rotate-[6deg] bg-white p-2 pb-5 reveal reveal-delay-2" data-reveal>
+        <div
+          class="polaroid absolute bottom-[26%] left-[10%] w-32 rotate-[6deg] bg-white p-2 pb-5 reveal reveal-delay-2"
+          data-reveal>
           <div class="aspect-[5/6] overflow-hidden rounded-sm bg-neutral-200">
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=400&q=80" alt="" class="h-full w-full object-cover" />
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=400&q=80"
+              alt="" class="h-full w-full object-cover" />
           </div>
         </div>
         <div class="absolute left-[36%] top-[46%] z-20 max-w-xs reveal" data-reveal>
@@ -367,58 +742,129 @@
   </section>
 
   <!-- Bento -->
-  <section id="bento" class="section-bleed border-t border-white/10 bg-[#0a0a0a] text-white">
+  <section id="bento" class="section-bleed border-y border-neutral-100 bg-neutral-50 text-neutral-900">
     <div class="mx-auto max-w-6xl">
-      <p class="section-kicker-invert text-center reveal" data-reveal>Details</p>
-      <h2 class="heading-display-invert mx-auto mb-16 max-w-2xl text-center reveal text-[clamp(1.65rem,3.5vw,2.35rem)]" data-reveal>
+      <p class="section-kicker text-center reveal" data-reveal>Details</p>
+      <h2 class="heading-display mx-auto mb-16 max-w-2xl text-center reveal text-[clamp(1.65rem,3.5vw,2.35rem)]"
+        data-reveal>
         Everything else, tucked quietly away.
       </h2>
-      <div class="grid auto-rows-[minmax(112px,auto)] grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-4">
-        <div class="bento-feature reveal" data-reveal>
-          <div class="mb-5 flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10 text-lg">✈</div>
-          <h3 class="text-base font-semibold tracking-tight">Flight alerts</h3>
-          <p class="mt-2 text-sm tracking-tight text-white/45">Price shifts on the routes you already love.</p>
-        </div>
-        <div class="bento-cell reveal" data-reveal>
-          <span class="text-xl">📴</span>
-          <h3 class="mt-3 text-sm font-semibold tracking-tight">Offline mode</h3>
-        </div>
-        <div class="bento-cell reveal reveal-delay-1" data-reveal>
-          <span class="text-xl">💱</span>
-          <h3 class="mt-3 text-sm font-semibold tracking-tight">Multi-currency</h3>
-        </div>
-        <div class="bento-banner reveal" data-reveal>
-          <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
-            <div>
-              <h3 class="text-base font-semibold tracking-tight">Shared wallets</h3>
-              <p class="mt-1 text-sm tracking-tight text-white/45">Split without the spreadsheet drama.</p>
+      <div class="grid auto-rows-[minmax(180px,auto)] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+        <!-- Flight alerts: Large 2x2 -->
+        <div class="bento-card-large reveal" data-reveal>
+          <div class="flex-1">
+            <div class="bento-icon-box-teal mb-6 text-xl">✈</div>
+            <div class="absolute -right-12 top-4 opacity-10">
+              <svg width="180" height="180" viewBox="0 0 24 24" fill="currentColor" class="text-teal-600">
+                <path
+                  d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" />
+              </svg>
             </div>
-            <div class="hidden gap-1 sm:flex">
-              <div class="h-11 w-7 rounded-md bg-white/20"></div>
-              <div class="-mt-1.5 h-11 w-7 rounded-md bg-white/28"></div>
-              <div class="h-11 w-7 rounded-md bg-white/14"></div>
+          </div>
+          <div class="relative z-10">
+            <h3 class="text-[17px] font-semibold tracking-tight text-neutral-900">Flight alerts</h3>
+            <p class="mt-2 text-[14px] leading-relaxed text-neutral-500">
+              Price shifts monitored closely on the routes you already love. We'll nudge you when it's time to book.
+            </p>
+          </div>
+        </div>
+
+        <!-- Shared wallets: Wide 2x1 -->
+        <div class="bento-card-wide reveal reveal-delay-1" data-reveal>
+          <div class="flex h-full flex-col justify-between sm:flex-row sm:items-end">
+            <div class="mb-6 sm:mb-0">
+              <div class="bento-icon-box-orange mb-4 text-xl">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4" />
+                  <path d="M4 6v12c0 1.1.9 2 2 2h14v-4" />
+                  <path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z" />
+                </svg>
+              </div>
+              <h3 class="text-[15px] font-semibold tracking-tight text-neutral-900">Shared wallets</h3>
+              <p class="mt-1 text-sm tracking-tight text-neutral-500">Split without the spreadsheet drama.</p>
+            </div>
+            <div class="flex gap-1.5 self-start sm:self-auto">
+              <div class="h-14 w-8 rounded-lg bg-orange-100 shadow-inner"></div>
+              <div class="-mt-2 h-14 w-8 rounded-lg bg-orange-200 shadow-inner"></div>
+              <div class="h-14 w-8 rounded-lg bg-teal-100 shadow-inner"></div>
             </div>
           </div>
         </div>
-        <div class="bento-cell reveal" data-reveal>
-          <span class="text-xl">🔔</span>
-          <h3 class="mt-3 text-sm font-semibold tracking-tight">Smart nudges</h3>
+
+        <!-- Offline mode: Square 1x1 -->
+        <div class="bento-card-square reveal reveal-delay-2" data-reveal>
+          <div class="bento-icon-box-teal text-xl">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m2 2 20 20" />
+              <path d="M8.5 8.5c3.5-3.5 9-3.5 12.5 0" />
+              <path d="M5 5c-1.5 1.5-2 3.5-2 5" />
+              <path d="M12 12c2.5-2.5 6-2.5 8.5 0" />
+            </svg>
+          </div>
+          <h3 class="mt-6 text-[15px] font-semibold tracking-tight text-neutral-900">Offline mode</h3>
         </div>
-        <div class="bento-cell reveal reveal-delay-1" data-reveal>
-          <span class="text-xl">🌐</span>
-          <h3 class="mt-3 text-sm font-semibold tracking-tight">Live links</h3>
+
+        <!-- Multi-currency: Square 1x1 -->
+        <div class="bento-card-square reveal" data-reveal>
+          <div class="bento-icon-box-orange text-xl">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
+              <path d="M12 18V6" />
+            </svg>
+          </div>
+          <h3 class="mt-6 text-[15px] font-semibold tracking-tight text-neutral-900">Multi-currency</h3>
         </div>
-        <div class="bento-cell col-span-2 reveal lg:col-span-1" data-reveal>
-          <span class="text-xl">🔒</span>
-          <h3 class="mt-3 text-sm font-semibold tracking-tight">Private by default</h3>
+
+        <!-- Smart nudges: Square 1x1 -->
+        <div class="bento-card-square reveal reveal-delay-1" data-reveal>
+          <div class="bento-icon-box-teal text-xl">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+              <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+            </svg>
+          </div>
+          <h3 class="mt-6 text-[15px] font-semibold tracking-tight text-neutral-900">Smart nudges</h3>
         </div>
+
+        <!-- Live links: Square 1x1 -->
+        <div class="bento-card-square reveal reveal-delay-2" data-reveal>
+          <div class="bento-icon-box-orange text-xl">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+            </svg>
+          </div>
+          <h3 class="mt-6 text-[15px] font-semibold tracking-tight text-neutral-900">Live links</h3>
+        </div>
+
+        <!-- Private by default: Wide 2x1 -->
+        <div class="bento-card-wide reveal reveal-delay-3" data-reveal>
+          <div class="flex h-full flex-col justify-between">
+            <div class="bento-icon-box-teal mb-4 text-xl">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-[15px] font-semibold tracking-tight text-neutral-900">Private by default</h3>
+              <p class="mt-1 text-sm tracking-tight text-neutral-500">Your plans aren't scraped or shared.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- Finale -->
-  <section id="finale" class="section-bleed relative flex min-h-[78vh] flex-col items-center justify-center bg-black px-6 text-white">
-    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_20%,_var(--tw-gradient-stops))] from-teal-900/20 via-transparent to-transparent"></div>
+  <section id="finale"
+    class="section-bleed relative flex min-h-[78vh] flex-col items-center justify-center bg-black px-6 text-white">
+    <div
+      class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_20%,_var(--tw-gradient-stops))] from-teal-900/20 via-transparent to-transparent">
+    </div>
     <div class="relative z-10 mx-auto w-full max-w-xl text-center">
       <h2 class="heading-display-invert reveal text-[clamp(1.65rem,3.8vw,2.5rem)]" data-reveal>
         Where are we going next?
@@ -429,7 +875,8 @@
         <input id="destination" type="text" placeholder="City, country, or vibe" class="finale-input sm:max-w-xs" />
         <button type="button" class="finale-cta">Start the Canvas</button>
       </div>
-      <p class="mt-14 text-[11px] tracking-tight text-white/30 reveal" data-reveal>Lakbay · Journey, planned and remembered.</p>
+      <p class="mt-14 text-[11px] tracking-tight text-white/30 reveal" data-reveal>Lakbay · Journey, planned and
+        remembered.</p>
     </div>
   </section>
 
@@ -438,11 +885,13 @@
   </footer>
 
   <button type="button" id="scroll-top-btn" class="scroll-top-btn" aria-label="Back to top">
-    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
       <path d="M12 19V5M12 5l-7 7M12 5l7 7" />
     </svg>
   </button>
 
   <script src="js/main.js" defer></script>
 </body>
+
 </html>
